@@ -3,7 +3,6 @@ import type { Metadata, Viewport } from "next";
 import React from "react";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Umami from "@/components/umami";
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +41,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <Umami />
       </body>
     </html>
   );

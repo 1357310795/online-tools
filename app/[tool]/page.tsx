@@ -20,6 +20,12 @@ export function generateMetadata({
   };
 }
 
+export const generateStaticParams = async () => {
+	return (
+    tools.map((tool) => ({ tool: tool.route })) ?? []
+  );
+};
+
 function Page({ params }: { params: { tool: string } }) {
   const tool = tools.find((obj) => obj.route === params.tool);
   const ToolComponent = React.lazy(
